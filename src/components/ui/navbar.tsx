@@ -134,7 +134,7 @@ export default function Navbar() {
             </Link>
           </nav>
           <div className="mt-4 flex flex-col space-y-2">
-            <Button variant="outline" asChild>
+            <Button variant="outline" className="border-primary"asChild>
               <Link href="/login" onClick={() => setMobileMenuOpen(false)}>
                 Login
               </Link>

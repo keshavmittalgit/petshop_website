@@ -24,7 +24,7 @@ export default function Signup() {
   const toggleVisibility = () => setIsVisible((prev) => !prev);
 
   // Check password against several regex requirements
-  const checkStrength = (pass:any) => {
+  const checkStrength = (pass:string) => {
     const requirements = [
       { regex: /.{8,}/, text: "At least 8 characters" },
       { regex: /[0-9]/, text: "At least 1 number" },
@@ -43,7 +43,7 @@ export default function Signup() {
     [strength]
   );
 
-  const getStrengthColor = (score:any) => {
+  const getStrengthColor = (score:number) => {
     if (score === 0) return "bg-border";
     if (score <= 1) return "bg-red-500";
     if (score <= 2) return "bg-orange-500";
@@ -51,7 +51,7 @@ export default function Signup() {
     return "bg-emerald-500";
   };
 
-  const getStrengthText = (score:any) => {
+  const getStrengthText = (score:number) => {
     if (score === 0) return "Enter a password";
     if (score <= 2) return "Weak password";
     if (score === 3) return "Medium password";
@@ -61,7 +61,7 @@ export default function Signup() {
   // Check if the confirm password field matches the password
   const isPasswordMatch = password === confirmPassword;
 
-  const handleSubmit = (e:any) => {
+  const handleSubmit = (e:React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     // Validate password meets all requirements.
     if (strengthScore < 4) {
@@ -216,16 +216,17 @@ export default function Signup() {
                 <Button type="submit" className="w-full">
                   Create account
                 </Button>
-                <Button variant="outline" className="w-full">
+                <Button type="button" variant="outline" className="w-full">
                   Sign up with Google
                 </Button>
               </div>
-              <div className="mt-4 text-center text-sm">
+              {/* <div className="mt-4 text-center text-sm">
                 if you have an account?{" "}
                 <a href="/login" className="underline underline-offset-4">
                   login
                 </a>
-              </div>
+              </div> */}
+              <div className="h-2"></div>
             </form>
           </CardContent>
         </Card>

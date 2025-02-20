@@ -8,7 +8,7 @@ export default function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = React.useState(false);
 
   return (
-    <header className="sticky top-0 z-40 w-full  bg-background shadow-lg dark:shadow-[#ffffff19]">
+    <header className="sticky top-0 z-40 w-full  bg-background shadow-lg dark:shadow-[#ffffff2b]">
       <div className=" flex h-16 items-center justify-between md:mx-8 px-4">
         <Link href="/" className="flex items-center space-x-3 ">
           <div className="h-6 w-6">logo</div>
@@ -95,7 +95,7 @@ export default function Navbar() {
 
       {/* Mobile Menu */}
       {mobileMenuOpen && (
-        <div className="md:hidden border-t px-4 pb-4">
+        <div className="md:hidden border-t px-4 pb-4 ">
           <nav className="flex flex-col space-y-2 pt-4">
             <Link
               href="/"

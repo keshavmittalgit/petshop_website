@@ -133,9 +133,9 @@ export default function Signup() {
                   <div className="relative">
                     <Input
                       id="confirmPassword"
-                      className={`pe-9 mt-2${
-                        !isPasswordMatch && confirmPassword ? "border-red-500 active:border-red-500 focus:border-red-500" : ""
-                      }`}
+                      className={`${
+                        !isPasswordMatch ? "border-red-500" : ""
+                      } mt-2`}
                       placeholder="Confirm Password"
                       type={isVisible ? "text" : "password"}
                       value={confirmPassword}

@@ -12,8 +12,8 @@ import { Label } from "@/components/ui/label"
 
 export default function Login() {
   return (
-    <div className="flex justify-center items-center min-h-[90vh] w-full">
-    <div className={cn("flex flex-col gap-6", "")}>
+    <div className="flex justify-center items-center min-h-[90vh] w-full ">
+    <div className={cn("flex flex-col gap-6 max-w-[350px]" )}>
       <Card>
         <CardHeader>
           <CardTitle className="text-2xl">Login</CardTitle>

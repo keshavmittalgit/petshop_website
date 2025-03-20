@@ -254,12 +254,12 @@ export default function Signup() {
                   </Button>
                 </div>
               </div>
-              <div className="mt-4 text-center text-sm">
+              {/* <div className="mt-4 text-center text-sm">
                 if you have an account?{" "}
                 <a href="/login" className="underline underline-offset-4">
                   login
                 </a>
-              </div>
+              </div> */}
             </form>
           </CardContent>
         </Card>
